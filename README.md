@@ -1,16 +1,22 @@
 # A primar on Adversarial Examples
 adversarial examples を用いた攻撃手法とその防御手法のいくつかを検証するためのプログラム.  
-この検証実験のプログラムに関しては, 書籍の Appendix A にも補足説明を記載しているのでそちらも参照のこと.
+この検証実験のプログラムに関しては, 本の Appendix A にも補足説明を記載しているのでそちらも参照のこと.
 
 
 ## データ準備
 CIFAR10 に関しては PyTorch の `torchvision.datasets.CIFAR10` クラスをそのまま使用しているので準備は必要ない.
 
-GTSRB に関しては以下の手順で準備をする.
+GTSRB に関しては以下の手順で準備をする.  
+本来は学習とテストの両方のデータを用いるべきだったが, テストデータのラベルが公開されてないと勘違いして学習データを split して使用している.
+大勢に影響はないと考えているが, 余裕があればそのうち修正する.
 - [公式ダウンロードページ](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset#Downloads) のリンクを辿って `GTSRB_Final_Training_Images.zip` を `./data/` にダウンロード.
 - zip ファイルを解凍.
 - `./notebook/GTSRB_preprocessing.ipynb` で前処理を実施.
 - `./data/GTSRB_processed/` が実験で使用するデータとなる.
+
+## 学習済みモデルの配布
+学習済みモデルを [Google Drive](https://drive.google.com/open?id=1sJJ6WQ4X-Hdsoh1YVMVz05Hn5N6hzm0E) で共有している.  
+この `model/` 以下にデータ毎に学習したモデルを格納している (上でも述べているように `GTSRB_processed` に関しては学習データの一部でのみ学習したものになっているので注意).
 
 
 ## 環境構築
