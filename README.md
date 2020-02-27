@@ -1,6 +1,9 @@
 # A Primer on Adversarial Examples
 adversarial examples を用いた攻撃手法とその防御手法のいくつかを検証するためのプログラム.  
-この検証実験のプログラムに関しては, 本の Appendix A にも補足説明を記載しているのでそちらも参照のこと.
+この検証実験のプログラムに関しては, 本の Appendix A にも補足説明を記載しているのでそちらも参照のこと.  
+本の TeX ファイルは [https://github.com/yoheikikuta/a-primer-on-adversarial-examples-tex](別のレポジトリ) で管理していてそれを submodule として管理しているので, 本の内容に関する issue や PR は別のレポジトリの方でよしなにやっていただけると嬉しい.
+
+基本的に全部無料で公開していますが, 元々技術書展 8 で販売しようと思っていたもので, 役に立ったという方は [BOOTH の商品](https://yohei-kikuta.booth.pm/items/1867263) を購入していただけると私がハッピーになれます.
 
 
 ## データ準備
