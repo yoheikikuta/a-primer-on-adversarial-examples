@@ -1,4 +1,4 @@
-# A primar on Adversarial Examples
+# A Primer on Adversarial Examples
 adversarial examples を用いた攻撃手法とその防御手法のいくつかを検証するためのプログラム.  
 この検証実験のプログラムに関しては, 本の Appendix A にも補足説明を記載しているのでそちらも参照のこと.
 
