@@ -16,7 +16,7 @@ GTSRB に関しては以下の手順で準備をする.
 ## 環境構築
 Docker が使える環境を想定している.  
 自分が使う時はスクリプトを作成したり小さいモデルで試す場合は local で CPU 環境を用いて, 大きめのモデルを使う場合は Colaboratory の GPU 環境で notebook に移植したコードを実行している.
-基本的に GPU enabled な PyTorch が使える環境があれば, notebook を
+(GPU インスタンスがあって PyTorch が使えるのであれば, notebook を介する必要はなく `main.py` をそのまま使える)
 
 Docker image をビルドして環境を構築する.
 
@@ -46,14 +46,25 @@ source activate work
 
 ```
 (in a docker container)
-python main.py --dataset cifar10 --is_train --model normal --train_method none --is_test --test_method fgsm
+python main.py \
+  --dataset cifar10 \
+  --is_train \
+  --model normal \
+  --train_method none \
+  --is_test \
+  --test_method fgsm
 ```
 
 別の例として, GTSRB_processed データで学習したモデル `model_normal_ifgsm` で, rfgsm で作成した adversarial examples でカーネル密度推定の実験とランダムリサイズと 0-padding の実験をしたい場合は以下のように実行する.
 
 ```
 (in a docker container)
-python main.py --dataset GTSRB_processed --model_name_for_test model_normal_ifgsm --test_method fgsm --is_kde_test --is_random_crop_test
+python main.py \
+  --dataset GTSRB_processed \
+  --model_name_for_test model_normal_ifgsm \
+  --test_method fgsm \
+  --is_kde_test \
+  --is_random_crop_test
 ```
 
 
