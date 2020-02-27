@@ -1,0 +1,12 @@
+.devcontainer
+.vscode
+.mypy_cache
+*.pyc
+data/*
+!data/.gitkeep
+log/*
+!log/.gitkeep
+model/*
+!model/.gitkeep
+.DS_Store
+.ipynb_checkpoints
