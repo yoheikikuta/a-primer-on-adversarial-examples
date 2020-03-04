@@ -1,9 +1,9 @@
-# A Primer on Adversarial Examples
+# A Primer on Adversarial Examples ([本の PDF はこちら](https://drive.google.com/file/d/159RzggX_4BwR9u7XMGrdqPuwaMiD80ic/view))
 adversarial examples を用いた攻撃手法とその防御手法のいくつかを検証するためのプログラム.  
 この検証実験のプログラムに関しては, 本の Appendix A にも補足説明を記載しているのでそちらも参照のこと.  
-本の TeX ファイルは [https://github.com/yoheikikuta/a-primer-on-adversarial-examples-tex](別のレポジトリ) で管理していてそれを submodule として管理しているので, 本の内容に関する issue や PR は別のレポジトリの方でよしなにやっていただけると嬉しい.
+本の TeX ファイルは [別のレポジトリ](https://github.com/yoheikikuta/a-primer-on-adversarial-examples-tex) で管理していて, それを submodule として管理しているので, 本の内容に関する issue や PR は別レポジトリの方でよしなにやっていただけると嬉しい.
 
-基本的に全部無料で公開していますが, 元々技術書展 8 で販売しようと思っていたもので, 役に立ったという方は [BOOTH の商品](https://yohei-kikuta.booth.pm/items/1867263) を購入していただけると私がハッピーになれます.
+**基本的に全部無料で公開していますが, 元々技術書典 8 で販売しようと思っていたもので, 役に立ったという方は [BOOTH の商品](https://yohei-kikuta.booth.pm/items/1867263) を購入していただけると私がハッピーになれます :moneybag: :moneybag: :moneybag:.**
 
 
 ## データ準備
@@ -16,6 +16,7 @@ GTSRB に関しては以下の手順で準備をする.
 - zip ファイルを解凍.
 - `./notebook/GTSRB_preprocessing.ipynb` で前処理を実施.
 - `./data/GTSRB_processed/` が実験で使用するデータとなる.
+- (面倒であれば, 学習済みモデルを公開している Google Drive に前処理済みデータも格納している).
 
 ## 学習済みモデルの配布
 学習済みモデルを [Google Drive](https://drive.google.com/open?id=1sJJ6WQ4X-Hdsoh1YVMVz05Hn5N6hzm0E) で共有している.  
